@@ -68,7 +68,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 
 # Random Forest
-clf = RandomForestClassifier(n_estimators=60)
+clf = RandomForestClassifier(n_estimators=20)
 clf.fit(X, y)
 print ('Classifier:',clf)
 y_pred = clf.predict(X_test)  
