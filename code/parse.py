@@ -3,7 +3,7 @@ import numpy as np
 from datetime import datetime
 
 
-def parseData(currentYear = True):
+def readData(currentYear = True):
 
     data = list()
     with open('../data/bitstampUSD_1-min_data_2012-01-01_to_2017-10-20.csv', 'r') as csvfile:
@@ -26,3 +26,7 @@ def parseData(currentYear = True):
     #data = data[1:] # remove header
     return np.array(data)
 
+def parseData(data, dataColumn = 7):
+    x = data[:,0].astype('int')
+    y = data[:,dataColumn]
+    return [x,y]
