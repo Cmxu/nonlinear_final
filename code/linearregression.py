@@ -7,11 +7,11 @@ data = readData()
 [x,y] = parseData(data)
 x = x.reshape(x.size, 1)
 
-x_train = x[:-10000]
-y_train = y[:-10000]
+x_train = x[:-1000]
+y_train = y[:-1000]
 
-x_test = x[-10000:]
-y_test = y[-10000:]
+x_test = x[-1000:]
+y_test = y[-1000:]
 
 def lr(x_train, y_train, x_test, all, r):
     if(all):
